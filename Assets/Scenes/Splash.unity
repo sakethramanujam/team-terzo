@@ -313,7 +313,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.27910414, y: 0.19852346}
   m_AnchorMax: {x: 0.9110001, y: 0.393}
-  m_AnchoredPosition: {x: -108.4478, y: -6.2795296}
+  m_AnchoredPosition: {x: -108.447815, y: -6.279541}
   m_SizeDelta: {x: 137.69995, y: 1201.3}
   m_Pivot: {x: 0.5447819, y: 0.5488188}
 --- !u!114 &558232786
@@ -382,7 +382,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.030145835, y: 0.19034375}
   m_AnchorMax: {x: 0.5492918, y: 0.38883987}
-  m_AnchoredPosition: {x: 5.903, y: -0.094680786}
+  m_AnchoredPosition: {x: 5.903015, y: -0.09472656}
   m_SizeDelta: {x: 80.406006, y: 57.310547}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &692791596
@@ -609,7 +609,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.64933336, y: 0.2267461}
   m_AnchorMax: {x: 0.94164586, y: 0.37600002}
-  m_AnchoredPosition: {x: -4.9541016, y: -1.545109}
+  m_AnchoredPosition: {x: -4.9541016, y: -1.545166}
   m_SizeDelta: {x: 789.70776, y: 728.1892}
   m_Pivot: {x: 0.5447819, y: 0.5488188}
 --- !u!114 &1084532790
@@ -784,6 +784,9 @@ MonoBehaviour:
     SimultaneousPlayCount: 0
   - Name: gameover
     Clip: {fileID: 8300000, guid: fb6ddd332eb96334e939dff7590144f1, type: 3}
+    SimultaneousPlayCount: 0
+  - Name: Heartbeat
+    Clip: {fileID: 8300000, guid: 029d55bb386812a4a963235b7aeb679c, type: 3}
     SimultaneousPlayCount: 0
 --- !u!4 &1226835896
 Transform:

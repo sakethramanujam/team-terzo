@@ -75,7 +75,7 @@ public class PlayerController : MonoBehaviour
         ReligionSlider.minValue = 0;
         ReligionSlider.value = ReligionEquality;
 
-        dragDistance = Screen.height * 15 / 100; //dragDistance is 15% height of the screen
+        dragDistance = Screen.height * 10 / 100; //dragDistance is 15% height of the screen
     }
 
 
@@ -185,7 +185,7 @@ public class PlayerController : MonoBehaviour
             ReligionEquality=(int)ReligionSlider.value;
             Religion.text = "" + ReligionEquality;
         }
-
+        check();
         collision.gameObject.SetActive(false);
     }
 
@@ -195,6 +195,18 @@ public class PlayerController : MonoBehaviour
         {
             //gameover
             gameover();
+        }
+
+        if (IncomeEquality <= 10 || GenderEquality <= 10 || ReligionEquality <= 10 || EducationEquality <= 10)
+        {
+
+            SoundManager.Instance.PlayMusic(SoundManager.Instance.GameSounds[5]);
+        }
+
+        if (IncomeEquality > 10 || GenderEquality > 10 || ReligionEquality > 10 || EducationEquality > 10)
+        {
+            SoundManager.Instance.Stop();
+            SoundManager.Instance.PlayMusic(SoundManager.Instance.GameSounds[5]);
         }
     }
 
