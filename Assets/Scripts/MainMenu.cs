@@ -15,7 +15,9 @@ public class MainMenu : MonoBehaviour {
             Screen.fullScreen = false;
 #endif
         }
-    
+
+    public Button togglemute;
+    public Sprite mute,unmute;
 
     private void Start()
     {
@@ -53,11 +55,11 @@ public class MainMenu : MonoBehaviour {
 
         if (SoundManager.Instance.IsMuted())
         {
-            GameObject.Find("Mute").GetComponentInChildren<Text>().text = "UnMute";
+            togglemute.image.overrideSprite = unmute;
         }
         else
         {
-            GameObject.Find("Mute").GetComponentInChildren<Text>().text = "Mute";
+            togglemute.image.overrideSprite = mute;
         }
     }
 }

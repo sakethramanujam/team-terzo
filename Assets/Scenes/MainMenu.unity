@@ -147,7 +147,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.6422709, y: 0.32124647}
   m_AnchorMax: {x: 0.8725209, y: 0.4325212}
-  m_AnchoredPosition: {x: 6, y: 2.00008}
+  m_AnchoredPosition: {x: 6, y: 2.000061}
   m_SizeDelta: {x: -2, y: -8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &253744796
@@ -232,7 +232,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: eff73bc09c9b7ae43ac7ae187eaa8bfe, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f11d981ecec530346b94967cd8052813, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -451,7 +451,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -459,21 +459,19 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 32
+    m_Font: {fileID: 12800000, guid: 66dc69db109ef5242a6ad0edb5bfb35b, type: 3}
+    m_FontSize: 288
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
-    m_MaxSize: 40
+    m_MaxSize: 289
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'qwerty
-
-    qwert'
+  m_Text: This game is to reduce inequalities.
 --- !u!222 &479273920
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -667,7 +665,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 2fd4f688a43e37944b35868d5d219d84, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c3d901d825acad74b999c3017fc00fa8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -713,7 +711,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.23343751, y: 0.75414073}
   m_AnchorMax: {x: 0.80425, y: 0.9494516}
-  m_AnchoredPosition: {x: -0.000076294, y: 0.00077057}
+  m_AnchoredPosition: {x: -0.000091552734, y: 0.0007324219}
   m_SizeDelta: {x: 366.29, y: 223.36}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &667880120
@@ -771,7 +769,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &682091581
 RectTransform:
   m_ObjectHideFlags: 0
@@ -988,6 +986,7 @@ GameObject:
   - component: {fileID: 1279845670}
   - component: {fileID: 1279845669}
   - component: {fileID: 1279845668}
+  - component: {fileID: 1279845671}
   m_Layer: 5
   m_Name: Play
   m_TagString: Untagged
@@ -1003,17 +1002,17 @@ RectTransform:
   m_GameObject: {fileID: 1279845666}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.4082842, y: 1.4082838, z: 1.4082838}
   m_Children:
   - {fileID: 988202713}
   m_Father: {fileID: 2087324488}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.39266667, y: 0.5}
-  m_AnchorMax: {x: 0.6422709, y: 0.6333239}
-  m_AnchoredPosition: {x: -0.77365136, y: 0.5}
-  m_SizeDelta: {x: 7.200012, y: 10.799988}
-  m_Pivot: {x: 1.0614507, y: 0.5}
+  m_AnchorMin: {x: 0.34431252, y: 0.46780282}
+  m_AnchorMax: {x: 0.6881042, y: 0.6613381}
+  m_AnchoredPosition: {x: -4.815979, y: 7.500061}
+  m_SizeDelta: {x: -173.79999, y: -195.20001}
+  m_Pivot: {x: 0.50000006, y: 0.5}
 --- !u!114 &1279845668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1110,6 +1109,24 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1279845666}
+--- !u!95 &1279845671
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1279845666}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d0b0fd6d5f550ee449cc2a46015a59ef, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1412821177
 GameObject:
   m_ObjectHideFlags: 0
@@ -1142,11 +1159,11 @@ RectTransform:
   m_Father: {fileID: 1665519298}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.75874716, y: 0.80178016}
-  m_AnchorMax: {x: 0.9597472, y: 0.9451205}
-  m_AnchoredPosition: {x: 1.019989, y: 0}
-  m_SizeDelta: {x: -1.0200005, y: 0}
-  m_Pivot: {x: -0.0000001937151, y: 0.5}
+  m_AnchorMin: {x: 0.7551013, y: 0.84900004}
+  m_AnchorMax: {x: 0.9363097, y: 0.9451205}
+  m_AnchoredPosition: {x: 0.40001965, y: 3.6999512}
+  m_SizeDelta: {x: -15.299999, y: -7.3}
+  m_Pivot: {x: 0.49999988, y: 0.5}
 --- !u!114 &1412821179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1218,7 +1235,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 38879ecafef726749a05c79e2c8fb6f0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 025062f2b14a57d479e68a57ea77b2ac, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1281,14 +1298,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: e151cbf18cbc4ed4d977b030ed85c482, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d3c919f99d63a254fa80ee5ce4c3688f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1410,6 +1427,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9452d6c0722d8ed4dbcbb359c5f7f557, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  togglemute: {fileID: 666512476}
+  mute: {fileID: 21300000, guid: c3d901d825acad74b999c3017fc00fa8, type: 3}
+  unmute: {fileID: 21300000, guid: f18ede4c2ace514449e795ef901e25ca, type: 3}
 --- !u!4 &1866599741
 Transform:
   m_ObjectHideFlags: 0
