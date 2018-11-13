@@ -54,7 +54,7 @@ public class Obstaclepool : MonoBehaviour
             float spawnXPosition = lanes[(int)Mathf.Abs(Random.Range(0.0f, 2.9f))];
                 //...then set the current column to that position.
                 columns[currentColumn].transform.position = new Vector2(spawnXPosition, spawnYPosition);
-
+            columns[currentColumn].SetActive(true);
                 //Increase the value of currentColumn. If the new size is too big, set it back to zero
                 currentColumn++;
 
