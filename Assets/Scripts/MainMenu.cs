@@ -42,6 +42,11 @@ public class MainMenu : MonoBehaviour {
         Panel.gameObject.SetActive(false);
     }
 
+    public void PlayButtonSound()
+    {
+        SoundManager.Instance.PlaySound(SoundManager.Instance.GameSounds[0].Name);
+    }
+
     public void MuteAndUmute()
     {
         SoundManager.Instance.ToggleMute();

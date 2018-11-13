@@ -226,7 +226,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.10736844, y: 0.111508064}
   m_AnchorMax: {x: 0.87813884, y: 0.39876816}
-  m_AnchoredPosition: {x: 13.913002, y: -12}
+  m_AnchoredPosition: {x: 13.913025, y: -12}
   m_SizeDelta: {x: 1965.2002, y: 1306.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &692791596
@@ -459,7 +459,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxSimultaneousSounds: 5
-  GameSounds: []
+  GameSounds:
+  - Name: 
+    Clip: {fileID: 8300000, guid: 9d9ecd0b44516d04c9cca2b8e2eb2755, type: 3}
+    SimultaneousPlayCount: 0
+  - Name: 
+    Clip: {fileID: 0}
+    SimultaneousPlayCount: 0
+  - Name: 
+    Clip: {fileID: 0}
+    SimultaneousPlayCount: 0
+  - Name: 
+    Clip: {fileID: 0}
+    SimultaneousPlayCount: 0
+  - Name: 
+    Clip: {fileID: 0}
+    SimultaneousPlayCount: 0
 --- !u!4 &1226835896
 Transform:
   m_ObjectHideFlags: 0
@@ -704,7 +719,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.10736844, y: 0.5}
   m_AnchorMax: {x: 0.87813884, y: 0.78731185}
-  m_AnchoredPosition: {x: -0.0028915, y: 0.0019073}
+  m_AnchoredPosition: {x: -0.0028686523, y: 0.0018920898}
   m_SizeDelta: {x: 1965.2, y: 1306.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2070743971
