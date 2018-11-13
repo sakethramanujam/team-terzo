@@ -596,20 +596,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxSimultaneousSounds: 5
   GameSounds:
-  - Name: 
+  - Name: Button
     Clip: {fileID: 8300000, guid: 9d9ecd0b44516d04c9cca2b8e2eb2755, type: 3}
     SimultaneousPlayCount: 0
-  - Name: 
-    Clip: {fileID: 0}
+  - Name: Menu
+    Clip: {fileID: 8300000, guid: f192d6b55f4ea1542b28452849926e48, type: 3}
     SimultaneousPlayCount: 0
-  - Name: 
-    Clip: {fileID: 0}
+  - Name: Gameplay
+    Clip: {fileID: 8300000, guid: 5a01275e154c41141b5c310e46ece27e, type: 3}
     SimultaneousPlayCount: 0
-  - Name: 
-    Clip: {fileID: 0}
+  - Name: collectable
+    Clip: {fileID: 8300000, guid: e537802f7f11107498db5940543eb3e4, type: 3}
     SimultaneousPlayCount: 0
-  - Name: 
-    Clip: {fileID: 0}
+  - Name: gameover
+    Clip: {fileID: 8300000, guid: fb6ddd332eb96334e939dff7590144f1, type: 3}
     SimultaneousPlayCount: 0
 --- !u!4 &1226835896
 Transform:

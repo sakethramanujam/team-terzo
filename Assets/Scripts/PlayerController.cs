@@ -29,6 +29,8 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        SoundManager.Instance.Stop();
+        SoundManager.Instance.PlayMusic(SoundManager.Instance.GameSounds[2]);
         GameOverPanel.SetActive(false);
         IncomeEquality = (int)Random.Range(20, PlayerGoals.Instance.MaxIncomeEquality/2);
         GenderEquality = (int)Random.Range(20, PlayerGoals.Instance.MaxGenderEquality/2);
