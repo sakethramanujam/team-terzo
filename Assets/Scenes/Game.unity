@@ -779,6 +779,14 @@ MonoBehaviour:
   ReligionSlider: {fileID: 1911766857}
   GameOverPanel: {fileID: 458056181}
   obstaclepool: {fileID: 1896477323}
+  MoneyThreshold: {fileID: 1932346553}
+  GenderThreshold: {fileID: 366914449}
+  ReligionThreshold: {fileID: 264017180}
+  EducationThreshold: {fileID: 1213660211}
+  Money: {fileID: 47552686}
+  Gender: {fileID: 2107458652}
+  Religion: {fileID: 413013690}
+  Education: {fileID: 2116154646}
 --- !u!61 &193502309
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -27,6 +27,18 @@ public class PlayerController : MonoBehaviour
 
     public Obstaclepool obstaclepool;
 
+
+
+    public Text MoneyThreshold;
+    public Text GenderThreshold;
+    public Text ReligionThreshold;
+    public Text EducationThreshold;
+
+    public Text Money;
+    public Text Gender;
+    public Text Religion;
+    public Text Education;
+
     void Start()
     {
         SoundManager.Instance.Stop();
@@ -35,8 +47,17 @@ public class PlayerController : MonoBehaviour
         IncomeEquality = (int)Random.Range(20, PlayerGoals.Instance.MaxIncomeEquality/2);
         GenderEquality = (int)Random.Range(20, PlayerGoals.Instance.MaxGenderEquality/2);
         ReligionEquality = (int)Random.Range(70, PlayerGoals.Instance.MaxReligionEquality/2);
-        EducationEquality = (int)Random.Range(70, PlayerGoals.Instance.MaxReligionEquality/2);
+        EducationEquality = (int)Random.Range(70, PlayerGoals.Instance.MaxEducationEquality/2);
+        MoneyThreshold.text=""+ PlayerGoals.Instance.MaxIncomeEquality;
+        GenderThreshold.text = "" + PlayerGoals.Instance.MaxGenderEquality;
+        ReligionThreshold.text = "" + PlayerGoals.Instance.MaxReligionEquality;
+        EducationThreshold.text = "" + PlayerGoals.Instance.MaxEducationEquality;
 
+
+        Money.text = "" + IncomeEquality;
+        Gender.text = "" + GenderEquality;
+        Religion.text = "" + ReligionEquality;
+        Education.text = "" + EducationEquality;
 
         IncomeSlider.maxValue = 100;
         IncomeSlider.minValue = 0;
@@ -56,8 +77,15 @@ public class PlayerController : MonoBehaviour
 
         dragDistance = Screen.height * 15 / 100; //dragDistance is 15% height of the screen
     }
+
+
+
+
+
+
     private void Update()
     {
+
         if (Input.touchCount == 1) // user is touching the screen with a single touch
         {
             Touch touch = Input.GetTouch(0); // get the touch
@@ -116,6 +144,12 @@ public class PlayerController : MonoBehaviour
         ReligionSlider.value -= 0.01f;
         ReligionEquality = (int)ReligionSlider.value;
 
+        Money.text = "" + IncomeEquality;
+        Gender.text = "" + GenderEquality;
+        Religion.text = "" + ReligionEquality;
+        Education.text = "" + EducationEquality;
+
+
         CheckForZero();
 
     }
@@ -124,30 +158,32 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        
-        
-         if(collision.gameObject.GetComponent<SpriteRenderer>().sprite ==obstaclepool.CollectableSprites[0])
+        if (collision.gameObject.GetComponent<SpriteRenderer>().sprite ==obstaclepool.CollectableSprites[0])
          {
             IncomeSlider.value += (int)Random.Range(1f, 4.9f);
             IncomeEquality=(int) IncomeSlider.value;
-         }
+            Money.text = "" + IncomeEquality;
+        }
 
         if (collision.gameObject.GetComponent<SpriteRenderer>().sprite == obstaclepool.CollectableSprites[1])
         {
             EducationSlider.value += (int)Random.Range(1f, 4.9f);
             EducationEquality=(int)EducationSlider.value;
+            Education.text = "" + EducationEquality;
         }
 
         if (collision.gameObject.GetComponent<SpriteRenderer>().sprite == obstaclepool.CollectableSprites[2])
         {
             GenderSlider.value += (int)Random.Range(1f, 4.9f);
             GenderEquality =(int) GenderSlider.value;
+            Gender.text = "" + GenderEquality;
         }
 
         if (collision.gameObject.GetComponent<SpriteRenderer>().sprite == obstaclepool.CollectableSprites[3])
         {
             ReligionSlider.value += (int)Random.Range(1f, 4.9f);
             ReligionEquality=(int)ReligionSlider.value;
+            Religion.text = "" + ReligionEquality;
         }
 
         collision.gameObject.SetActive(false);
@@ -171,7 +207,7 @@ public class PlayerController : MonoBehaviour
 
     public void CheckForZero()
     {
-        if (IncomeEquality <=0.1|| GenderEquality <= 0.1 || ReligionEquality <= 0.1 || EducationEquality <= 0.1)
+        if (IncomeEquality <=0.9|| GenderEquality <= 0.9 || ReligionEquality <= 0.9 || EducationEquality <= 0.9)
         {
             //gameover
             gameover();
