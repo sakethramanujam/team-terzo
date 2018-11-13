@@ -23,12 +23,13 @@ public class PlayerController : MonoBehaviour
     public Slider GenderSlider;
     public Slider EducationSlider;
     public Slider ReligionSlider;
-
+    public GameObject GameOverPanel;
 
     public Obstaclepool obstaclepool;
 
     void Start()
     {
+        GameOverPanel.SetActive(false);
         IncomeEquality = (int)Random.Range(20, PlayerGoals.Instance.MaxIncomeEquality/2);
         GenderEquality = (int)Random.Range(20, PlayerGoals.Instance.MaxGenderEquality/2);
         ReligionEquality = (int)Random.Range(70, PlayerGoals.Instance.MaxReligionEquality/2);
@@ -155,7 +156,14 @@ public class PlayerController : MonoBehaviour
         if(IncomeEquality>PlayerGoals.Instance.MaxIncomeEquality||GenderEquality>PlayerGoals.Instance.MaxGenderEquality||ReligionEquality>PlayerGoals.Instance.MaxReligionEquality||EducationEquality>PlayerGoals.Instance.MaxEducationEquality)
         {
             //gameover
+            gameover();
         }
+    }
+
+    void gameover()
+    {
+        Time.timeScale = 0;
+        GameOverPanel.SetActive(true);
     }
 
     public void CheckForZero()
@@ -163,6 +171,7 @@ public class PlayerController : MonoBehaviour
         if (IncomeEquality <=0|| GenderEquality <= 0 || ReligionEquality <= 0 || EducationEquality <= 0)
         {
             //gameover
+            gameover();
         }
     }
     

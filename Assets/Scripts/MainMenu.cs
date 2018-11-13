@@ -21,7 +21,7 @@ public class MainMenu : MonoBehaviour {
 
     private void Start()
     {
-        SoundManager.Instance.PlayMusic(SoundManager.Instance.GameSounds[0]);
+        //SoundManager.Instance.PlayMusic(SoundManager.Instance.GameSounds[0]);
     }
 
     // Update is called once per frame

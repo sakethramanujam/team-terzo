@@ -145,7 +145,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.17470834, y: 0.4826303}
   m_AnchorMax: {x: 0.87813884, y: 0.84820354}
-  m_AnchoredPosition: {x: -0.0000038147, y: -4.5999985}
+  m_AnchoredPosition: {x: 0, y: -4.6000366}
   m_SizeDelta: {x: 0, y: -8.699997}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &223593205
@@ -331,7 +331,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'TEAM
 
-    TERIZO'
+    TERZO'
 --- !u!222 &692791597
 CanvasRenderer:
   m_ObjectHideFlags: 0
