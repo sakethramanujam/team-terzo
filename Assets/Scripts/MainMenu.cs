@@ -29,7 +29,7 @@ public class MainMenu : MonoBehaviour {
 
     public void PlayGame()
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("PlayerGoals");
     }
 
     public void PanelOn(GameObject Panel)

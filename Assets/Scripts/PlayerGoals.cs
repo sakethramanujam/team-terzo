@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerGoals : MonoBehaviour {
 
@@ -14,6 +15,11 @@ public class PlayerGoals : MonoBehaviour {
     public Slider GenderSlider;
     public Slider EducationSlider;
     public Slider ReligionSlider;
+
+    public Text Educate;
+    public Text Economy;
+    public Text religion;
+    public Text Gender;
 
     public static PlayerGoals Instance ;
 
@@ -33,10 +39,17 @@ public class PlayerGoals : MonoBehaviour {
     // Use this for initialization
     void Start () {
 
+       StartCoroutine( Loadscene());
+
         MaxIncomeEquality = (int)Random.Range(70, 90);
         MaxGenderEquality = (int)Random.Range(70, 90);
         MaxReligionEquality = (int)Random.Range(70, 90);
         MaxEducationEquality = (int)Random.Range(70, 90);
+
+        Educate.text = "" + MaxEducationEquality;
+        Economy.text = "" + MaxIncomeEquality;
+        religion.text = "" + MaxReligionEquality;
+        Gender.text = "" + MaxGenderEquality;
 
 
         IncomeSlider.maxValue = 100;
@@ -56,6 +69,11 @@ public class PlayerGoals : MonoBehaviour {
         ReligionSlider.value = MaxReligionEquality;
 
     }
-	
-	
+
+    IEnumerator Loadscene()
+    {
+        yield return new WaitForSeconds(5);
+        SceneManager.LoadScene("Game");
+    }
+
 }
