@@ -46,10 +46,10 @@ public class PlayerGoals : MonoBehaviour {
         MaxReligionEquality = (int)Random.Range(70, 90);
         MaxEducationEquality = (int)Random.Range(70, 90);
 
-        Educate.text = "" + MaxEducationEquality;
-        Economy.text = "" + MaxIncomeEquality;
-        religion.text = "" + MaxReligionEquality;
-        Gender.text = "" + MaxGenderEquality;
+        Educate.text = "" + MaxEducationEquality+"%";
+        Economy.text = "" + MaxIncomeEquality + "%";
+        religion.text = "" + MaxReligionEquality + "%";
+        Gender.text = "" + MaxGenderEquality + "%";
 
 
         IncomeSlider.maxValue = 100;
