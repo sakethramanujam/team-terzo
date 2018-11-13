@@ -1,14 +1,17 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class Obstaclepool : MonoBehaviour
 {
-    //  public GameObject columnPrefab;                                 //The column game object.
-    int columnPoolSize;                               //How many columns to keep on standby.
+    public GameObject columnPrefab;                                 //The column game object.
+    public int columnPoolSize = 5;                                  //How many columns to keep on standby.
     public float spawnRate = 3f;                                    //How quickly columns spawn.
-    public List<GameObject> columns = new List<GameObject>();
-                                    //Collection of pooled columns.
+
+    public List<Sprite> CollectableSprites = new List<Sprite>();
+    List<float> lanes = new List<float>();
+    private GameObject[] columns;                                   //Collection of pooled columns.
     private int currentColumn = 0;                                  //Index of the current column in the collection.
 
     private Vector2 objectPoolPosition = new Vector2(-15, -25);     //A holding position for our unused columns offscreen.
@@ -18,8 +21,22 @@ public class Obstaclepool : MonoBehaviour
 
     void Start()
     {
+        lanes.Add(-1.5f);
+        lanes.Add(1.5f);
+        lanes.Add(0f);
+
         timeSinceLastSpawned = 0f;
-        columnPoolSize = columns.Count;
+
+        //Initialize the columns collection.
+        columns = new GameObject[columnPoolSize];
+        //Loop through the collection... 
+        for (int i = 0; i < columnPoolSize; i++)
+        {
+
+            //...and create the individual columns.
+            columns[i] = (GameObject)Instantiate(columnPrefab, objectPoolPosition, Quaternion.identity);
+            columns[i].GetComponent<SpriteRenderer>().sprite = CollectableSprites[(int)Mathf.Abs(Random.Range(0.0f, 2.9f))];
+        }
     }
 
 
@@ -32,10 +49,9 @@ public class Obstaclepool : MonoBehaviour
             {
                 timeSinceLastSpawned = 0f;
 
-                //Set a random y position for the column
-                float spawnYPosition = Random.Range(5f,10f);
-            float spawnXPosition = Random.Range(-1f, +1f);
-
+            //Set a random y position for the column
+            float spawnYPosition = this.transform.position.y;
+            float spawnXPosition = lanes[(int)Mathf.Abs(Random.Range(0.0f, 2.9f))];
                 //...then set the current column to that position.
                 columns[currentColumn].transform.position = new Vector2(spawnXPosition, spawnYPosition);
 
