@@ -41,15 +41,11 @@ public class PlayerGoals : MonoBehaviour {
       
     }
 
-    IEnumerator Loadscene()
-    {
-        yield return new WaitForSeconds(5);
-        SceneManager.LoadScene("Game");
-    }
+  
 
     public void Play()
     {
-        StartCoroutine(Loadscene());
+      
     }
 
 }

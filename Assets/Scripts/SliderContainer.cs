@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class SliderContainer : MonoBehaviour {
@@ -17,8 +18,8 @@ public class SliderContainer : MonoBehaviour {
     public Text Gender;
     // Use this for initialization
     void Start () {
-
-        PlayerGoals.Instance.Play();
+        Time.timeScale = 1;
+        StartCoroutine(Loadscene());
 
         Educate.text = "" +PlayerGoals.Instance.MaxEducationEquality + "%";
         Economy.text = "" + PlayerGoals.Instance.MaxIncomeEquality + "%";
@@ -44,6 +45,11 @@ public class SliderContainer : MonoBehaviour {
 
     }
 
+    IEnumerator Loadscene()
+    {
+        yield return new WaitForSeconds(5);
+        SceneManager.LoadScene("Game");
+    }
     // Update is called once per frame
     void Update () {
 		
