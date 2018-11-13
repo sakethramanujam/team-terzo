@@ -18,13 +18,13 @@ public class Splash : MonoBehaviour
     {
        // SoundManager.Instance.PlayMusic(SoundManager.Instance.GameSounds[0]);
         StartCoroutine(ShowLogo());
-        SceneManager.LoadScene("MainMenu");
+       
     }
 
     IEnumerator ShowLogo()
     {
         yield return new WaitForSeconds(Logotime);
-       
+        SceneManager.LoadScene("MainMenu");
     }
 
     // Update is called once per frame

@@ -6,11 +6,6 @@ using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour {
 
-    public Sprite Mute ;
-    public Sprite Unmute;
-
-    public Image MuteAndUnmute;
-
    
         private void Awake()
         {
@@ -53,11 +48,11 @@ public class MainMenu : MonoBehaviour {
 
         if (SoundManager.Instance.IsMuted())
         {
-            MuteAndUnmute.sprite = Unmute;
+            GameObject.Find("Mute").GetComponentInChildren<Text>().text = "UnMute";
         }
         else
         {
-            MuteAndUnmute.sprite = Mute;
+            GameObject.Find("Mute").GetComponentInChildren<Text>().text = "Mute";
         }
     }
 }
