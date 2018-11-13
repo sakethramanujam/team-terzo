@@ -115,7 +115,7 @@ public class PlayerController : MonoBehaviour
 
          if(collision.gameObject.GetComponent<SpriteRenderer>().sprite ==obstaclepool.CollectableSprites[0])
          {
-
+            
          }
 
         if (collision.gameObject.GetComponent<SpriteRenderer>().sprite == obstaclepool.CollectableSprites[1])

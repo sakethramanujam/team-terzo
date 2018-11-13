@@ -35,7 +35,7 @@ public class Obstaclepool : MonoBehaviour
 
             //...and create the individual columns.
             columns[i] = (GameObject)Instantiate(columnPrefab, objectPoolPosition, Quaternion.identity);
-            columns[i].GetComponent<SpriteRenderer>().sprite = CollectableSprites[(int)Mathf.Abs(Random.Range(0.0f, 2.9f))];
+            columns[i].GetComponent<SpriteRenderer>().sprite = CollectableSprites[(int)Mathf.Abs(Random.Range(0.0f, 3.9f))];
         }
     }
 
