@@ -8,19 +8,53 @@ public class PlayerController : MonoBehaviour
     private Vector3 lp;   //Last touch position
     private float dragDistance;  //minimum distance for a swipe to be registered
 
+
+      
     public float MoveDistance = 150;
 
     private int playerPosition = 1;
 
+    public int IncomeEquality;
+    public int GenderEquality;
+    public int EducationEquality;
+    public int ReligionEquality;
+
+    public Slider IncomeSlider;
+    public Slider GenderSlider;
+    public Slider EducationSlider;
+    public Slider ReligionSlider;
+
+
+    public Obstaclepool obstaclepool;
+
     void Start()
     {
+        IncomeEquality = (int)Random.Range(20, PlayerGoals.Instance.MaxIncomeEquality/2);
+        GenderEquality = (int)Random.Range(20, PlayerGoals.Instance.MaxGenderEquality/2);
+        ReligionEquality = (int)Random.Range(70, PlayerGoals.Instance.MaxReligionEquality/2);
+        EducationEquality = (int)Random.Range(70, PlayerGoals.Instance.MaxReligionEquality/2);
+
+
+        IncomeSlider.maxValue = 100;
+        IncomeSlider.minValue = 0;
+        IncomeSlider.value = IncomeEquality;
+
+        GenderSlider.maxValue = 100;
+        GenderSlider.minValue = 0;
+        GenderSlider.value = GenderEquality;
+
+        EducationSlider.maxValue = 100;
+        EducationSlider.minValue = 0;
+        EducationSlider.value = EducationEquality;
+
+        ReligionSlider.maxValue = 100;
+        ReligionSlider.minValue = 0;
+        ReligionSlider.value = ReligionEquality;
+
         dragDistance = Screen.height * 15 / 100; //dragDistance is 15% height of the screen
     }
     private void Update()
     {
-
-
-
         if (Input.touchCount == 1) // user is touching the screen with a single touch
         {
             Touch touch = Input.GetTouch(0); // get the touch
@@ -70,20 +104,37 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-
-
-
-
-
-        //// if D key is pressed down
-        //if (Input.GetKeyDown(KeyCode.D))
-        //{
-           
-        //}
-        //// if A key is pressed downs
-        //else if (Input.GetKeyDown(KeyCode.A))
-        //{
-           
-        //}
+       
     }
+
+
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        
+
+         if(collision.gameObject.GetComponent<SpriteRenderer>().sprite ==obstaclepool.CollectableSprites[0])
+         {
+
+         }
+
+        if (collision.gameObject.GetComponent<SpriteRenderer>().sprite == obstaclepool.CollectableSprites[1])
+        {
+
+        }
+
+        if (collision.gameObject.GetComponent<SpriteRenderer>().sprite == obstaclepool.CollectableSprites[2])
+        {
+
+        }
+
+        if (collision.gameObject.GetComponent<SpriteRenderer>().sprite == obstaclepool.CollectableSprites[3])
+        {
+
+        }
+
+    }
+
+
+
 }
