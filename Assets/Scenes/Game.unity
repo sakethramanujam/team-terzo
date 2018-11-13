@@ -531,6 +531,7 @@ GameObject:
   - component: {fileID: 193502307}
   - component: {fileID: 193502308}
   - component: {fileID: 193502309}
+  - component: {fileID: 193502310}
   m_Layer: 0
   m_Name: Charcter
   m_TagString: Player
@@ -630,11 +631,11 @@ MonoBehaviour:
   GenderEquality: 0
   EducationEquality: 0
   ReligionEquality: 0
-  IncomeSlider: {fileID: 0}
-  GenderSlider: {fileID: 0}
-  EducationSlider: {fileID: 0}
-  ReligionSlider: {fileID: 0}
-  obstaclepool: {fileID: 0}
+  IncomeSlider: {fileID: 1350691131}
+  GenderSlider: {fileID: 3697300}
+  EducationSlider: {fileID: 813796565}
+  ReligionSlider: {fileID: 1911766857}
+  obstaclepool: {fileID: 1896477323}
 --- !u!61 &193502309
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -660,6 +661,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.7605348, y: 0.49632746}
   m_EdgeRadius: 0
+--- !u!50 &193502310
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 193502304}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &204974502
 GameObject:
   m_ObjectHideFlags: 0

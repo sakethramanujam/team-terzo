@@ -104,7 +104,17 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-       
+        IncomeSlider.value -=0.01f;
+        IncomeEquality = (int)IncomeSlider.value;
+        EducationSlider.value -= 0.01f;
+        EducationEquality = (int)EducationSlider.value;
+        GenderSlider.value -= 0.01f; 
+        GenderEquality = (int)GenderSlider.value;
+        ReligionSlider.value -= 0.01f;
+        ReligionEquality = (int)ReligionSlider.value;
+
+        
+
     }
 
 
@@ -112,29 +122,49 @@ public class PlayerController : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         
-
+        
          if(collision.gameObject.GetComponent<SpriteRenderer>().sprite ==obstaclepool.CollectableSprites[0])
          {
-            
+            IncomeSlider.value += (int)Random.Range(1f, 4.9f);
+            IncomeEquality=(int) IncomeSlider.value;
          }
 
         if (collision.gameObject.GetComponent<SpriteRenderer>().sprite == obstaclepool.CollectableSprites[1])
         {
-
+            EducationSlider.value += (int)Random.Range(1f, 4.9f);
+            EducationEquality=(int)EducationSlider.value;
         }
 
         if (collision.gameObject.GetComponent<SpriteRenderer>().sprite == obstaclepool.CollectableSprites[2])
         {
-
+            GenderSlider.value += (int)Random.Range(1f, 4.9f);
+            GenderEquality =(int) GenderSlider.value;
         }
 
         if (collision.gameObject.GetComponent<SpriteRenderer>().sprite == obstaclepool.CollectableSprites[3])
         {
-
+            ReligionSlider.value += (int)Random.Range(1f, 4.9f);
+            ReligionEquality=(int)ReligionSlider.value;
         }
 
+        collision.gameObject.SetActive(false);
     }
 
+    public void check()
+    {
+        if(IncomeEquality>PlayerGoals.Instance.MaxIncomeEquality||GenderEquality>PlayerGoals.Instance.MaxGenderEquality||ReligionEquality>PlayerGoals.Instance.MaxReligionEquality||EducationEquality>PlayerGoals.Instance.MaxEducationEquality)
+        {
+            //gameover
+        }
+    }
 
+    public void CheckForZero()
+    {
+        if (IncomeEquality <=0|| GenderEquality <= 0 || ReligionEquality <= 0 || EducationEquality <= 0)
+        {
+            //gameover
+        }
+    }
+    
 
 }
