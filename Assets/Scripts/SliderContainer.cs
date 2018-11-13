@@ -18,6 +18,7 @@ public class SliderContainer : MonoBehaviour {
     // Use this for initialization
     void Start () {
 
+        PlayerGoals.Instance.Play();
 
         Educate.text = "" +PlayerGoals.Instance.MaxEducationEquality + "%";
         Economy.text = "" + PlayerGoals.Instance.MaxIncomeEquality + "%";

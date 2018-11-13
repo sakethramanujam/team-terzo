@@ -1857,14 +1857,6 @@ MonoBehaviour:
   MaxGenderEquality: 0
   MaxEducationEquality: 0
   MaxReligionEquality: 0
-  IncomeSlider: {fileID: 639005623}
-  GenderSlider: {fileID: 2050297040}
-  EducationSlider: {fileID: 16216334}
-  ReligionSlider: {fileID: 1083455070}
-  Educate: {fileID: 1856474753}
-  Economy: {fileID: 1980734092}
-  religion: {fileID: 707461426}
-  Gender: {fileID: 839129523}
 --- !u!1 &1856474751
 GameObject:
   m_ObjectHideFlags: 0
@@ -2577,6 +2569,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99263ac891ab5e0489ccc47a5189556c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IncomeSlider: {fileID: 639005623}
+  GenderSlider: {fileID: 2050297040}
+  EducationSlider: {fileID: 16216334}
+  ReligionSlider: {fileID: 1083455070}
+  Educate: {fileID: 1856474753}
+  Economy: {fileID: 1980734092}
+  religion: {fileID: 707461426}
+  Gender: {fileID: 839129523}
 --- !u!1 &2086096822
 GameObject:
   m_ObjectHideFlags: 0

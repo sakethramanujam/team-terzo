@@ -31,7 +31,7 @@ public class PlayerGoals : MonoBehaviour {
     // Use this for initialization
     void Start () {
 
-       StartCoroutine( Loadscene());
+     
 
         MaxIncomeEquality = (int)Random.Range(70, 90);
         MaxGenderEquality = (int)Random.Range(70, 90);
@@ -45,6 +45,11 @@ public class PlayerGoals : MonoBehaviour {
     {
         yield return new WaitForSeconds(5);
         SceneManager.LoadScene("Game");
+    }
+
+    public void Play()
+    {
+        StartCoroutine(Loadscene());
     }
 
 }
