@@ -458,23 +458,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a145a9efcebe2e4aa87d57142bdda1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxSimultaneousSounds: 5
-  GameSounds:
-  - Name: 
-    Clip: {fileID: 0}
-    SimultaneousPlayCount: 0
-  - Name: 
-    Clip: {fileID: 0}
-    SimultaneousPlayCount: 0
-  - Name: 
-    Clip: {fileID: 0}
-    SimultaneousPlayCount: 0
-  - Name: 
-    Clip: {fileID: 0}
-    SimultaneousPlayCount: 0
-  - Name: 
-    Clip: {fileID: 0}
-    SimultaneousPlayCount: 0
 --- !u!4 &1226835896
 Transform:
   m_ObjectHideFlags: 0
@@ -607,7 +590,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1797102914}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c82ec7af424f744d8a53e9aec66febc, type: 3}
+  m_Script: {fileID: 11500000, guid: 069699c5323f7444f8ef032d9f22dd10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Logotime: 2
