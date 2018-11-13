@@ -31,6 +31,12 @@ public class UiController : MonoBehaviour {
         SoundManager.Instance.PlaySound(SoundManager.Instance.GameSounds[0].Name);
     }
 
+    public void retry()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene("PlayerGoals");
+    }
+
     public void Pause()
     {
         Time.timeScale = 0;
