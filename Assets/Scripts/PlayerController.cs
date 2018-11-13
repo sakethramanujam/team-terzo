@@ -171,7 +171,7 @@ public class PlayerController : MonoBehaviour
 
     public void CheckForZero()
     {
-        if (IncomeEquality <=0|| GenderEquality <= 0 || ReligionEquality <= 0 || EducationEquality <= 0)
+        if (IncomeEquality <=0.1|| GenderEquality <= 0.1 || ReligionEquality <= 0.1 || EducationEquality <= 0.1)
         {
             //gameover
             gameover();
