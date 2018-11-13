@@ -116,7 +116,7 @@ public class PlayerController : MonoBehaviour
         ReligionSlider.value -= 0.01f;
         ReligionEquality = (int)ReligionSlider.value;
 
-        
+        CheckForZero();
 
     }
 
@@ -166,6 +166,7 @@ public class PlayerController : MonoBehaviour
     {
         Time.timeScale = 0;
         GameOverPanel.SetActive(true);
+        SoundManager.Instance.PlaySound(SoundManager.Instance.GameSounds[4].Name);
     }
 
     public void CheckForZero()
