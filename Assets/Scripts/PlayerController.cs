@@ -40,10 +40,14 @@ public class PlayerController : MonoBehaviour
     public Text Education;
 
     public Text YourScore, HighScore;
+
+
+    private bool IsGameOver=false;
    
 
     void Start()
     {
+        IsGameOver = false;
        
         SoundManager.Instance.Stop();
         SoundManager.Instance.PlayMusic(SoundManager.Instance.GameSounds[2]);
@@ -139,21 +143,23 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        IncomeSlider.value -=0.01f;
-        IncomeEquality = (int)IncomeSlider.value;
-        EducationSlider.value -= 0.01f;
-        EducationEquality = (int)EducationSlider.value;
-        GenderSlider.value -= 0.01f; 
-        GenderEquality = (int)GenderSlider.value;
-        ReligionSlider.value -= 0.01f;
-        ReligionEquality = (int)ReligionSlider.value;
+        if (!IsGameOver)
+        {
+            IncomeSlider.value -= 0.01f;
+            IncomeEquality = (int)IncomeSlider.value;
+            EducationSlider.value -= 0.01f;
+            EducationEquality = (int)EducationSlider.value;
+            GenderSlider.value -= 0.01f;
+            GenderEquality = (int)GenderSlider.value;
+            ReligionSlider.value -= 0.01f;
+            ReligionEquality = (int)ReligionSlider.value;
 
-        Money.text = "" + IncomeEquality;
-        Gender.text = "" + GenderEquality;
-        Religion.text = "" + ReligionEquality;
-        Education.text = "" + EducationEquality;
+            Money.text = "" + IncomeEquality;
+            Gender.text = "" + GenderEquality;
+            Religion.text = "" + ReligionEquality;
+            Education.text = "" + EducationEquality;
 
-
+        }
         CheckForZero();
 
     }
@@ -167,6 +173,7 @@ public class PlayerController : MonoBehaviour
             IncomeSlider.value += (int)Random.Range(1f, 4.9f);
             IncomeEquality=(int) IncomeSlider.value;
             Money.text = "" + IncomeEquality;
+            SoundManager.Instance.PlaySound(SoundManager.Instance.GameSounds[5].Name);
         }
 
         if (collision.gameObject.GetComponent<SpriteRenderer>().sprite == obstaclepool.CollectableSprites[1])
@@ -174,6 +181,7 @@ public class PlayerController : MonoBehaviour
             EducationSlider.value += (int)Random.Range(1f, 4.9f);
             EducationEquality=(int)EducationSlider.value;
             Education.text = "" + EducationEquality;
+            SoundManager.Instance.PlaySound(SoundManager.Instance.GameSounds[8].Name);
         }
 
         if (collision.gameObject.GetComponent<SpriteRenderer>().sprite == obstaclepool.CollectableSprites[2])
@@ -181,6 +189,7 @@ public class PlayerController : MonoBehaviour
             GenderSlider.value += (int)Random.Range(1f, 4.9f);
             GenderEquality =(int) GenderSlider.value;
             Gender.text = "" + GenderEquality;
+            SoundManager.Instance.PlaySound(SoundManager.Instance.GameSounds[6].Name);
         }
 
         if (collision.gameObject.GetComponent<SpriteRenderer>().sprite == obstaclepool.CollectableSprites[3])
@@ -188,6 +197,7 @@ public class PlayerController : MonoBehaviour
             ReligionSlider.value += (int)Random.Range(1f, 4.9f);
             ReligionEquality=(int)ReligionSlider.value;
             Religion.text = "" + ReligionEquality;
+            SoundManager.Instance.PlaySound(SoundManager.Instance.GameSounds[7].Name);
         }
         check();
         collision.gameObject.SetActive(false);
@@ -204,7 +214,7 @@ public class PlayerController : MonoBehaviour
 
     void gameover()
     {
-       
+        IsGameOver = true;
         Time.timeScale = 0;
         GameOverPanel.SetActive(true);
         SoundManager.Instance.PlaySound(SoundManager.Instance.GameSounds[4].Name);
