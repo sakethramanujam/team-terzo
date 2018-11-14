@@ -783,10 +783,19 @@ MonoBehaviour:
     Clip: {fileID: 8300000, guid: e537802f7f11107498db5940543eb3e4, type: 3}
     SimultaneousPlayCount: 0
   - Name: gameover
-    Clip: {fileID: 8300000, guid: fb6ddd332eb96334e939dff7590144f1, type: 3}
+    Clip: {fileID: 8300000, guid: 3873985207666da4d92e8869584ada19, type: 3}
     SimultaneousPlayCount: 0
-  - Name: Heartbeat
-    Clip: {fileID: 8300000, guid: 029d55bb386812a4a963235b7aeb679c, type: 3}
+  - Name: Money
+    Clip: {fileID: 8300000, guid: dc9cdea87cfaa254c92e87c6a7e9e93b, type: 3}
+    SimultaneousPlayCount: 0
+  - Name: gender
+    Clip: {fileID: 8300000, guid: dc19fd177685cff46a7b01c29b026dab, type: 3}
+    SimultaneousPlayCount: 0
+  - Name: religion
+    Clip: {fileID: 8300000, guid: d37263d7d8cf4a146b3cf0ab5918f9c5, type: 3}
+    SimultaneousPlayCount: 0
+  - Name: education
+    Clip: {fileID: 8300000, guid: 347cf27662a596f4fbe8d3158eae0b74, type: 3}
     SimultaneousPlayCount: 0
 --- !u!4 &1226835896
 Transform:
