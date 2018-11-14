@@ -40,6 +40,12 @@ public class PlayerController : MonoBehaviour
     public Text Religion;
     public Text Education;
 
+
+    public Text GMoney;
+    public Text GGender;
+    public Text GReligion;
+    public Text GEducation;
+
     public Text YourScore, HighScore;
 
 
@@ -240,6 +246,12 @@ public class PlayerController : MonoBehaviour
         GReligionSlider.maxValue = 100;
         GReligionSlider.minValue = 0;
         GReligionSlider.value = ReligionEquality;
+
+
+        GMoney.text = "" + IncomeEquality;
+        GGender.text = "" + GenderEquality;
+        GReligion.text = "" + ReligionEquality;
+        GEducation.text = "" + EducationEquality;
 
 
         SoundManager.Instance.PlaySound(SoundManager.Instance.GameSounds[4].Name);
