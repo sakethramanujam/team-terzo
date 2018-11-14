@@ -15,6 +15,7 @@ public class UiController : MonoBehaviour {
 
     public void LoadScene(string s)
     {
+        Timer.score = 0;
         SceneManager.LoadScene(s);
     }
 
@@ -39,6 +40,7 @@ public class UiController : MonoBehaviour {
     {
                Time.timeScale = 1;
         SceneManager.LoadScene("PlayerGoals");
+        Timer.score = 0;
     }
 
     public void Pause()
