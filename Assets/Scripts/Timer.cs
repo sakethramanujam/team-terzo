@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Timer : MonoBehaviour {
 
     public Text Score_text;
-    public float score;
+    public static float score;
 
 	// Use this for initialization
 	void Start () {

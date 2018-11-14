@@ -39,10 +39,15 @@ public class PlayerController : MonoBehaviour
     public Text Religion;
     public Text Education;
 
+    public Text YourScore, HighScore;
+    public GameObject Blur_Bg;
+
     void Start()
     {
+       
         SoundManager.Instance.Stop();
         SoundManager.Instance.PlayMusic(SoundManager.Instance.GameSounds[2]);
+        Blur_Bg.SetActive(false);
         GameOverPanel.SetActive(false);
         IncomeEquality = (int)Random.Range(20, PlayerGoals.Instance.MaxIncomeEquality/2);
         GenderEquality = (int)Random.Range(20, PlayerGoals.Instance.MaxGenderEquality/2);
@@ -200,9 +205,17 @@ public class PlayerController : MonoBehaviour
 
     void gameover()
     {
+        Blur_Bg.SetActive(true);
         Time.timeScale = 0;
         GameOverPanel.SetActive(true);
         SoundManager.Instance.PlaySound(SoundManager.Instance.GameSounds[4].Name);
+        if(Timer.score >=PlayerPrefs.GetInt("HS"))
+        {
+            PlayerPrefs.SetInt("HS", (int)Timer.score);
+        }
+
+        YourScore.text = "Your Score:" + (int)Timer.score;
+        HighScore.text = "Your Score:" + PlayerPrefs.GetInt("HS");
     }
 
     public void CheckForZero()
