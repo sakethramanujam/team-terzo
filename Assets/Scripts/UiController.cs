@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class UiController : MonoBehaviour {
 
-    public GameObject Blur_Bg;
+   
 
 	// Use this for initialization
 	void Start () {
@@ -20,13 +20,13 @@ public class UiController : MonoBehaviour {
 
     public void PanelOn(GameObject Panel)
     {
-        Blur_Bg.SetActive(true);
+       
         Panel.gameObject.SetActive(true);
     }
 
     public void ClosePanel(GameObject Panel)
     {
-        Blur_Bg.SetActive(false);
+       
         Panel.gameObject.SetActive(false);
     }
 
@@ -37,8 +37,7 @@ public class UiController : MonoBehaviour {
 
     public void retry()
     {
-        Blur_Bg.SetActive(false);
-        Time.timeScale = 1;
+               Time.timeScale = 1;
         SceneManager.LoadScene("PlayerGoals");
     }
 

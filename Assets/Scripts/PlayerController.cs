@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
     public Slider GenderSlider;
     public Slider EducationSlider;
     public Slider ReligionSlider;
+
     public GameObject GameOverPanel;
 
     public Obstaclepool obstaclepool;
@@ -43,7 +44,13 @@ public class PlayerController : MonoBehaviour
 
 
     private bool IsGameOver=false;
-   
+
+
+    public Slider GIncomeSlider;
+    public Slider GGenderSlider;
+    public Slider GEducationSlider;
+    public Slider GReligionSlider;
+
 
     void Start()
     {
@@ -217,6 +224,24 @@ public class PlayerController : MonoBehaviour
         IsGameOver = true;
         Time.timeScale = 0;
         GameOverPanel.SetActive(true);
+
+        GIncomeSlider.maxValue = 100;
+        GIncomeSlider.minValue = 0;
+        GIncomeSlider.value = IncomeEquality;
+
+        GGenderSlider.maxValue = 100;
+        GGenderSlider.minValue = 0;
+        GGenderSlider.value = GenderEquality;
+
+        GEducationSlider.maxValue = 100;
+        GEducationSlider.minValue = 0;
+        GEducationSlider.value = EducationEquality;
+
+        GReligionSlider.maxValue = 100;
+        GReligionSlider.minValue = 0;
+        GReligionSlider.value = ReligionEquality;
+
+
         SoundManager.Instance.PlaySound(SoundManager.Instance.GameSounds[4].Name);
         if(Timer.score >=PlayerPrefs.GetInt("HS"))
         {
