@@ -10,7 +10,7 @@ public class UiController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        Blur_Bg.SetActive(false);
+      
 	}
 
     public void LoadScene(string s)
