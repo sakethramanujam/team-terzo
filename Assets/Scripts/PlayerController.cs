@@ -196,18 +196,6 @@ public class PlayerController : MonoBehaviour
             //gameover
             gameover();
         }
-
-        if (IncomeEquality <= 10 || GenderEquality <= 10 || ReligionEquality <= 10 || EducationEquality <= 10)
-        {
-
-            SoundManager.Instance.PlayMusic(SoundManager.Instance.GameSounds[5]);
-        }
-
-        if (IncomeEquality > 10 || GenderEquality > 10 || ReligionEquality > 10 || EducationEquality > 10)
-        {
-            SoundManager.Instance.Stop();
-            SoundManager.Instance.PlayMusic(SoundManager.Instance.GameSounds[5]);
-        }
     }
 
     void gameover()
