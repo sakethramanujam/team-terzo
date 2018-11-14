@@ -3939,7 +3939,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ebada5776407da4687d1300c9bb5d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Blur_Bg: {fileID: 0}
 --- !u!4 &992336081
 Transform:
   m_ObjectHideFlags: 0
