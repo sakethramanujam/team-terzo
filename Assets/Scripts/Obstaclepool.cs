@@ -55,8 +55,9 @@ public class Obstaclepool : MonoBehaviour
                 //...then set the current column to that position.
                 columns[currentColumn].transform.position = new Vector2(spawnXPosition, spawnYPosition);
             columns[currentColumn].SetActive(true);
-                //Increase the value of currentColumn. If the new size is too big, set it back to zero
-                currentColumn++;
+            columns[currentColumn].GetComponent<SpriteRenderer>().sprite = CollectableSprites[(int)Mathf.Abs(Random.Range(0.0f, 3.9f))];
+            //Increase the value of currentColumn. If the new size is too big, set it back to zero
+            currentColumn++;
 
                 if (currentColumn >= columnPoolSize)
                 {
